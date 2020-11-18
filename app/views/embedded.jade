@@ -1,0 +1,29 @@
+html
+    head
+        title Embedded
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(href='css/main.css',rel='stylesheet')
+        script(type='text/javascript', src='/pani.js')
+    body
+        h1(align='center') Temperature and humidity
+        div
+            canvas(id="chart" width="200" height="50")
+        div
+        table#demo(style='width:100%')
+            tbody
+                tr
+                    th Day/Month/Year
+                    th Temperature
+                    th humidity
+                    th Time
+                each one in embedded
+                    tr
+                        td #{one.day}/ #{one.month}/ #{one.year}
+                        td #{one.temperature} 
+                        td #{one.humidity}
+                        td #{one.hour} : #{one.minute}
+        
+            script(type='text/javascript',src='/js/Chart.js')
+            script(type='text/javascript',src='/js/sh.js')
+    
