@@ -1,10 +1,10 @@
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
-var modbusembedded=new Schema({
+var modbusSchema=new Schema({
     temperature: Number,
     humidity: Number,
     datetime: String
 });
 
-mongoose.model('modbus',modbusembedded);
+mongoose.model('modbus',modbusSchema);
